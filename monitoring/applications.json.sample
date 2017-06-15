@@ -1,0 +1,83 @@
+{
+    "applications": [
+        {
+            "name": "sample-nr-app-1(prod)"
+            "alert_channels":{
+                "email": [
+                    "person1@email.com",
+                    "person2@email.com",
+                    "person3@email.com"
+                ],
+                "pagerduty": [
+                    "Sample nr ap Application policy",
+                    "service-2"
+                ],
+                "slack": [
+                    "alert-prod-myapp",
+                    "channel-2"
+                ]
+            },
+            "checks": {
+                "response_time_web": [{
+                    "critical":{
+                        "threshold": "65",
+                        "duration": 5
+                    },
+                    "warning": {
+                        "threshold": "40",
+                        "duration": 5
+                    },
+                    "operator": "above",
+                    "enable": true
+                }],
+                "error_percentage": [{
+                    "critical":{
+                        "threshold": "20",
+                        "duration": 5
+                    },
+                    "warning": {
+                        "threshold": "10",
+                        "duration": 5
+                    },
+                    "operator": "below",
+                    "enable": true
+                }],
+                "apdex": [{
+                    "critical":{
+                        "threshold": "0.6",
+                        "duration": 10
+                    },
+                    "warning": {
+                        "threshold": "0.9",
+                        "duration": 5
+                    },
+                    "operator": "below",
+                    "enable": true
+                }],
+                "throughput_web": [{
+                    "critical":{
+                        "threshold": "4500",
+                        "duration": 5
+                    },
+                    "warning": {
+                        "threshold": "2500",
+                        "duration": 5
+                    },
+                    "operator": "above"
+                },
+                {
+                    "critical":{
+                        "threshold": "10",
+                        "duration": 5
+                    },
+                    "warning": {
+                        "threshold": "5",
+                        "duration": 5
+                    },
+                    "operator": "below",
+                    "enable": false
+                }]
+            }
+        }
+    ]
+}

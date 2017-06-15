@@ -1,0 +1,11 @@
+{
+    "newrelic": "newrelic api token",
+    "pagerduty": {
+        "pagerduty policy name": "pagerduty service key",
+        "service-2": "service-key-goes-here"
+    },
+    "slack": {
+        "alert-prod-myapp": "https://hooks.slack.com/services/secret/secretxxx",
+        "channel-2": "https://hooks.slack.com/services/X/X.."
+    }
+}
